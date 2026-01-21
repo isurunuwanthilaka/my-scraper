@@ -13,10 +13,15 @@ This GitHub Actions workflow automatically scrapes job listings for AI-related S
 ### 1. Add GitHub Secrets
 Go to your repository → **Settings** → **Secrets and variables** → **Actions**
 
-Add these secrets:
+**Required secrets for email notifications:**
 - `EMAIL_USERNAME`: Your Gmail address (e.g., yourname@gmail.com)
 - `EMAIL_PASSWORD`: Gmail app-specific password (see below)
 - `EMAIL_TO`: Recipient email address
+
+**Optional secret for LinkedIn API (free tier available):**
+- `RAPIDAPI_KEY`: Your RapidAPI key for JSearch (LinkedIn jobs API)
+  - Get free key at: https://rapidapi.com/laimoon-laimoon-rest-api/api/jsearch
+  - Free tier: 100 requests/month (more than enough for daily searches)
 
 #### How to get Gmail app-specific password:
 1. Enable 2-Factor Authentication on your Google Account
@@ -52,15 +57,22 @@ Singapore, India, Japan, South Korea, Thailand, Vietnam, Malaysia, Indonesia, Ph
 
 ## Features
 
-✅ **Multiple Job Sources:**
+✅ **LinkedIn-Focused Scraping:**
+- Searches LinkedIn jobs directly (via JSearch API)
+- AI/ML job titles: Software Engineer, Senior Software Engineer
+- Keyword filtering: AI, Machine Learning, Deep Learning, LLM
+- Location: Asia regions (Singapore, India, Japan, Korea, etc.)
+- Salary filter: $4000+ USD/month
+
+✅ **Backup Sources (if LinkedIn results limited):**
 - RemoteOK (free API)
-- GitHub Jobs (free API)
-- JSONFeed aggregators
+- Other job aggregators
 
 ✅ **Smart Filtering:**
-- Job title matching (Software Engineer, Senior Software Engineer)
-- Salary threshold ($4000+ USD/month)
-- AI/ML keyword filtering
+- Job title matching
+- Salary threshold verification
+- AI/ML keyword detection
+- Location-based filtering
 - Duplicate removal
 
 ✅ **Notifications:**

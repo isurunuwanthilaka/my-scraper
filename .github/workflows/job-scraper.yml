@@ -29,6 +29,8 @@ jobs:
           MIN_SALARY: 4000
           JOB_TITLES: "software engineer,senior software engineer"
           KEYWORDS: "AI,artificial intelligence,machine learning,deep learning,LLM"
+          REGION: "asia"
+          RAPIDAPI_KEY: ${{ secrets.RAPIDAPI_KEY }}
       
       - name: Send email notification
         if: steps.scrape.outputs.found_jobs == 'true'
