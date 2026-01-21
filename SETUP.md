@@ -44,7 +44,11 @@ env:
   MIN_SALARY: 4000           # Change to your minimum salary (USD/month)
   JOB_TITLES: "software engineer,senior software engineer"  # Job titles to search
   KEYWORDS: "AI,artificial intelligence,machine learning"   # Keywords to include
+  REGION: "asia"             # Filter by region (currently: asia)
 ```
+
+**Supported Asia Locations:**
+Singapore, India, Japan, South Korea, Thailand, Vietnam, Malaysia, Indonesia, Philippines, Pakistan, Bangladesh, Sri Lanka, Hong Kong, China, Taiwan
 
 ## Features
 
